@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Anton+SC&family=Bokor&family=Dosis:wght@200..800&family=Ga+Maamli&family=Hachi+Maru+Pop&family=Jaro:opsz@6..72&family=Lilita+One&family=Mouse+Memoirs&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+HR+Lijeva:wght@100..400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;/*link ازلة الخط ال تحت */
+}
+
+ul{
+    list-style: none; /*ازلة النقط ال ف القائمه */
+}
+
+.home {
+    height: 100vh; /*طول المتصفح ب الكامل*/
+    background-color: #000; 
+    font-family: "Anton", sans-serif;
+}
+
+nav .logo{
+    width: 80px;
+} 
+
+.container{
+    margin: 0 7rem;
+    height: 100%;
+}
+nav {
+    padding: 20px 0;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul{
+    display: flex; /*لحعل العناصر جمب بعض */
+    align-items: center; /*علشان يبقى على سطر واحد*/
+}
+ul li a{
+    padding: 20px;
+    text-transform: capitalize;
+    font-size: 20px;
+    background: linear-gradient(to right , #ff0000c5 ,#0000ffd5);
+    background-clip: text; /*عاشان اخفى الخلفيه الملونه بس و اعرض الكلام*/
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+}
+
+.content img{
+    width: 250px;
+    filter: grayscale(100%);
+    transition: 0.5s;
+    border-radius: 20%;
+    animation: joker 1s ease-out;
+    aspect-ratio: 1/1;
+    max-height: 600px;
+}
+.content img:hover{
+    filter: grayscale(0%);
+}
+@keyframes joker{
+    0% {
+        transform: translateX(500px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70%;  
+}
+
+.content-text{
+    animation: too 1s ease-out; 
+}
+@keyframes too{
+    0%{
+        transform: translateY(500px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+.content-text h1{
+    color: #fff;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.content-text h1 span{
+    font-size: 70px;
+    background: linear-gradient(to right , #ff0000c5 ,#0000ffd5);
+    background-clip: text; /*عاشان اخفى الخلفيه الملونه بس و اعرض الكلام*/
+    -webkit-text-fill-color: transparent;
+}
+
+.content-text p{
+    color: #fff;
+    line-height: 30px;
+    width: 50%;
+    letter-spacing: 1px;
+}
+
+.btn{
+    display: inline-block;
+    background-color: #070730;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border-radius: 12px;
+    padding: 10px 12px;
+    outline: none;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.btn:hover{
+    background: transparent;
+    border: 2px #fff solid; 
+}
+
+.social{
+    margin-left: 50px;
+}
+.social i{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 400;
+    margin: 10px 0;
+    animation: joker 1s ease-out;
+}
+
+@media (max-width: 900px){
+    body{
+        background-color: #000;
+    }
+    .content{
+        flex-direction: column;
+    }
+   .content-text h1{
+        text-align: center;
+   }
+   .content-text p{
+    width: 100%;
+   }
+   nav{
+    flex-direction: column;
+   }
+   .btn{
+    margin: 20px auto 20px; 
+   }
+   .social i{
+    margin: 10px;
+   }
+}
+@media (max-width: 600px){ 
+    .container{ 
+        margin: 0 2rem; 
+    } 
+    nav ul li a{ 
+        padding: 8px; 
+        font-size: 12px; 
+        letter-spacing: 1px; 
+    } 
+    .content img{ 
+        width: 150px; 
+    } 
+    .content-text h1{ 
+        font-size: 30px; 
+    } 
+    .content-text h1 span{ 
+        font-size: 50px; 
+    } 
+    .content-text p{ 
+        line-height: 20px; 
+    } 
+    .btn{ 
+        font-size: 16px; padding: 8px 10px; 
+    } 
+    .social i{ 
+        font-size: 24px; 
+    } 
+}
